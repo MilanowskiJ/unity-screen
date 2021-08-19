@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Unity Screen</title>
+</head>
+
+<body>
+  <div id="mainPage" class="">
+    <section id="titleSection">
+      <h1>Unity Screen</h1>
+      <button id="leaveRoomButton">Leave Room</button>
+    </section>
+
+    <section id="diceSection">
+      <h2>Dice</h2>
+      <section id="diceRoller">
+        <div class="diceCounter">
+          <button data-die="4" data-add="true">+</button>
+          <div>1d4</div>
+          <button data-die="4" data-add="false">-</button>
+        </div>
+        <div class="diceCounter">
+          <button data-die="6" data-add="true">+</button>
+          <div>1d6</div>
+          <button data-die="6" data-add="false">-</button>
+        </div>
+        <div class="diceCounter">
+          <button data-die="8" data-add="true">+</button>
+          <div>1d8</div>
+          <button data-die="8" data-add="false">-</button>
+        </div>
+        <div class="diceCounter">
+          <button data-die="10" data-add="true">+</button>
+          <div>1d10</div>
+          <button data-die="10" data-add="false">-</button>
+        </div>
+        <div class="diceCounter">
+          <button data-die="12" data-add="true">+</button>
+          <div>1d12</div>
+          <button data-die="12" data-add="false">-</button>
+        </div>
+        <div class="diceCounter">
+          <button data-die="20" data-add="true">+</button>
+          <div>1d20</div>
+          <button data-die="20" data-add="false">-</button>
+        </div>
+        <div class="diceCounter">
+          <button data-die="100" data-add="true">+</button>
+          <div>1d100</div>
+          <button data-die="100" data-add="false">-</button>
+        </div>
+        <div class="diceCounter">
+          <button data-die="2" data-add="true">+</button>
+          <div>1dXX</div>
+          <button data-die="2" data-add="false">-</button>
+        </div>
+        <button id="roll">Roll</button>
+        <button id="clear">Clear</button>
+      </section>
+
+      <h3>History</h3>
+      <div id="historyWrapper">
+        <div id="historyContainer">
+
+        </div>
+      </div>
+    </section>
+
+    <section id="statsSection">
+      <h2>Stats</h2>
+      <header>
+        <h3 id="currentStat">Passive Perception</h3>
+        <button id="link" class="popUpButton" data-target="linkWindow">Link</button>
+        <button id="changeStat" class="popUpButton" data-target="changeStatWindow">Change</button>
+      </header>
+      <div id="statsContainer">
+      </div>
+    </section>
+    <section id="initiativeSection">
+      <h2>Initiative</h2>
+      <div>
+        <button id="addInitiative" class="popUpButton" data-target="initiativeAddWindow">Add</button>
+      </div>
+      <div id="initiativeContainer">
+      </div>
+      <div id="initButtonContainer">
+        <button id="prevInitiative">Prev</button>
+        <button id="nextInitiative">Next</button>
+        <button id="resetInitiative" class="popUpButton" data-target="initiativeResetWindow">Reset</button>
+      </div>
+    </section>
+    <section id="rulesSection">
+      <h2>Rules</h2>
+      <section id="rulesScroller">
+        <h4>Blinded</h4>
+      <ul>
+        <li>A blinded creature can’t see and automatically fails any ability check that requires sight.</li>
+        <li>Attack rolls against the creature have advantage, and the creature’s Attack rolls have disadvantage.</li>
+      </ul>
+      <h4>Charmed</h4>
+      <ul>
+        <li>A charmed creature can’t Attack the charmer or target the charmer with harmful Abilities or magical Effects.</li>
+        <li>The charmer has advantage on any ability check to interact socially with the creature.</li>
+      </ul>
+      <h4>Deafened</h4>
+      <ul>
+        <li>A deafened creature can’t hear and automatically fails any ability check that requires hearing.</li>
+      </ul>
+      <h4>Frightened</h4>
+      <ul>
+        <li>A frightened creature has disadvantage on Ability Checks and Attack rolls while the source of its fear is within Line of Sight.</li>
+        <li>The creature can’t willingly move closer to the source of its fear.</li>
+      </ul>
+      <h4>Grappled</h4>
+      <ul>
+        <li>A grappled creature’s speed becomes 0, and it can’t benefit from any bonus to its speed.</li>
+        <li>The condition ends if the Grappler is incapacitated (see the condition).</li>
+        <li>The condition also ends if an Effect removes the grappled creature from the reach of the Grappler or Grappling Effect, such as when a creature is hurled away by the Thunderwave spell.</li>
+      </ul>
+      <h4>Incapacitated</h4>
+      <ul>
+        <li>An incapacitated creature can’t take Actions or Reactions.</li>
+      </ul>
+      <h4>Invisible</h4>
+      <ul>
+        <li>An invisible creature is impossible to see without the aid of magic or a Special sense. For the Purpose of Hiding, the creature is heavily obscured. The creature’s Location can be detected by any noise it makes or any tracks it leaves.</li>
+        <li>Attack rolls against the creature have disadvantage, and the creature’s Attack rolls have advantage.</li>
+      </ul>
+      <h4>Paralyzed</h4>
+      <ul>
+        <li>A paralyzed creature is incapacitated (see the condition) and can’t move or speak.</li>
+        <li>The creature automatically fails Strength and Dexterity Saving Throws.</li>
+        <li>Attack rolls against the creature have advantage.</li>
+        <li>Any Attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.</li>
+      </ul>
+      <h4>Petrified</h4>
+      <ul>
+        <li>A petrified creature is transformed, along with any nonmagical object it is wearing or carrying, into a solid inanimate substance (usually stone). Its weight increases by a factor of ten, and it ceases aging.</li>
+        <li>The creature is incapacitated (see the condition), can’t move or speak, and is unaware of its surroundings.</li>
+        <li>Attack rolls against the creature have advantage.</li>
+        <li>The creature automatically fails Strength and Dexterity Saving Throws.</li>
+        <li>The creature has Resistance to all damage.</li>
+        <li>The creature is immune to poison and disease, although a poison or disease already in its system is suspended, not neutralized.</li>
+      </ul>
+      <h4>Poisoned</h4>
+      <ul>
+        <li>A poisoned creature has disadvantage on Attack rolls and Ability Checks.</li>
+      </ul>
+      <h4>Prone</h4>
+      <ul>
+        <li>A prone creature’s only Movement option is to crawl, unless it stands up and thereby ends the condition.</li>
+        <li>The creature has disadvantage on Attack rolls.</li>
+        <li>An Attack roll against the creature has advantage if the attacker is within 5 feet of the creature. Otherwise, the Attack roll has disadvantage.</li>
+      </ul>
+      <h4>Restrained</h4>
+      <ul>
+        <li>A restrained creature’s speed becomes 0, and it can’t benefit from any bonus to its speed.</li>
+        <li>Attack rolls against the creature have advantage, and the creature’s Attack rolls have disadvantage.</li>
+        <li>The creature has disadvantage on Dexterity Saving Throws.</li>
+      </ul>
+      <h4>Stunned</h4>
+      <ul>
+        <li>A stunned creature is incapacitated (see the condition), can’t move, and can speak only falteringly.</li>
+        <li>The creature automatically fails Strength and Dexterity Saving Throws.</li>
+        <li>Attack rolls against the creature have advantage.</li>
+      </ul>
+      <h4>Unconscious</h4>
+      <ul>
+        <li>An unconscious creature is incapacitated (see the condition), can’t move or speak, and is unaware of its surroundings</li>
+        <li>The creature drops whatever it’s holding and falls prone.</li>
+        <li>The creature automatically fails Strength and Dexterity Saving Throws.</li>
+        <li>Attack rolls against the creature have advantage.</li>
+        <li>Any Attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.</li>
+      </ul>
+      </section>
+    </section>
+    <footer>
+      Jake Milanowski: <a>Contacts</a>
+    </footer>
+  </div>
+
+  <div id="linkWindow" class="popUpWindow">
+    <h3>Link D&DBeyond Campaign</h3>
+    <div>
+      <h5>CAMPAIGN URL</h5>
+      <input id="fileInput" type="file" accept=".html,.pdf">
+    </div>
+    <button id="confirmLinkStats" class="windowCloser" data-target="linkWindow">confirm</button>
+    <button class="windowCloser" data-target="linkWindow">cancel</button>
+  </div>
+
+  <div id="changeStatWindow" class="popUpWindow">
+    <h3>Change Stats</h3>
+    <div>
+      <h5>CHOOSE STAT</h5>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="1">Acrobatics</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="2">Animal Handling</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="3">Arcana</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="4">Athletics</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="5">Deception</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="6">History</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="7">Insight</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="8">Intimidation</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="9">Investigation</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="10">Medicine</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="11">Nature</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="12">Perception</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="13">Performance</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="14">Persuasion</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="15">Religion</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="16">Sleight of Hand</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="17">Stealth</button>
+      <button class="windowCloser statSelector" data-target="changeStatWindow" data-stat="18">Survival</button>
+    </div>
+    <button class="windowCloser" data-target="changeStatWindow">close</button>
+  </div>
+
+  <div id="initiativeAddWindow" class="popUpWindow">
+    <h3>Add Initiative Token</h3>
+    <div>
+      <h5>NAME</h5>
+      <input id="initiativeAddName" class="clearable" type="text">
+    </div>
+    <div>
+      <h5>VALUE</h5>
+      <input id="initiativeAddValue" class="clearable" type="number">
+    </div>
+    <button id="confirmAddMore">yes + more</button>
+    <button id="confirmAddInitiative" class="windowCloser" data-target="initiativeAddWindow">yes</button>
+    <button class="windowCloser" data-target="initiativeAddWindow">no</button>
+  </div>
+
+  <div id="initiativeResetWindow" class="popUpWindow">
+    <h3>Reset Initiative</h3>
+    <div>Are you sure you wish to reset the initiative tracker?</div>
+    <button id="confirmResetInitiative" class="windowCloser" data-target="initiativeResetWindow">yes</button>
+    <button class="windowCloser" data-target="initiativeResetWindow">no</button>
+  </div>
+
+  <div id="deleteCharacterWindow" class="popUpWindow">
+    <h3 id="characterDeleteTitle">Delete Character?</h3>
+    <div>Are you sure you wish to delete this character?</div>
+    <button id="confirmDeleteCharacter" class="windowCloser" data-target="deleteCharacterWindow">yes</button>
+    <button class="windowCloser" data-target="deleteCharacterWindow">no</button>
+  </div>
+
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>
+    $("body").bootstrapMaterialDesign();
+  </script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-storage.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

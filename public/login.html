@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Unity Screen</title>
+</head>
+
+<body>
+  <div id="loginPage" class="">
+    <section id="titleSection">
+      <h1>Unity Screen</h1>
+      <nav class="">
+      </nav>
+    </section>
+
+    <section id="loginSection">
+        <h2>Join a Room!</h2>
+        <input id="roomField" type="text">
+        <label for="roomField">Room</label>
+        <input id="passwordField" type="password">
+        <label for="passwordField">Password</label>
+        <button id="loginButton">Login</button>
+        <button id="newRoomButton">Create New Room</button>
+    </section>
+
+    <footer>
+      Jake Milanowski: <a>Contacts</a>
+    </footer>
+  </div>
+
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>
+    $("body").bootstrapMaterialDesign();
+  </script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-storage.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
